@@ -6,7 +6,7 @@ import Login from "@/components/Login";
 import Image from "next/image";
 
 const navigation = [
-  { name: 'Page 1', href: '/' }
+  { name: 'User Onboarding', href: '/' }
   // { name: 'Page 2', href: '/newpage' },
 ];
 
@@ -19,9 +19,10 @@ export default function Menu() {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">0xNestor</span>
-            <Image className="h-8 w-auto" src="/silk.svg" width="24" height="24" alt="Silk Logo" />
+            <span className="sr-only">NebulaHolo</span>
+            <Image className="h-8 w-auto" src="/nebula.png" width="24" height="24" alt="Silk Logo" />
           </a>
+          <div className=" justify-center items-center align-middle p-2 px-2 text-lg font-serif ">NebulaHolo</div>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -50,7 +51,7 @@ export default function Menu() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">0xNestor</span>
-              <Image className="h-8 w-auto" src="/silk.svg" width="24" height="24" alt="Silk Logo" />
+              <Image className="h-8 w-auto" src="/nebula.png" width="24" height="24" alt="Silk Logo" />
             </a>
             <button
               type="button"
