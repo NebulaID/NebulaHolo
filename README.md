@@ -1,11 +1,6 @@
-# Silk Wallet Template
+# Introducing NebulaHolo
 
-**A Next.js starter template seamlessly integrated with Silk Wallet, built using TypeScript and Tailwind CSS.**
-
-This project provides a foundation for building web3 applications leveraging Silk's unique features for enhanced security and recoverability:
-
-* **Personal Human Keys:** Create and use web3 wallets secured by private identity proofs.
-* **Zero Trust Protocols:** Protect user data with decentralized, trust-minimized architecture.
+NebulaHolo is a "Universal Personhood Issuer" designed to establish secure, verifiable identities for individuals as well as for refugees without traditional documentation. Utilizing Zeronym and Silk SDKs, NebulaHolo enables unique human identification with customizable status markers, providing underserved communities with proof of personhood and can really help needy people. This decentralized solution empowers individuals in accessing vital services and rights, while prioritizing privacy and security. By building a universal, accessible identity framework, NebulaHolo paves the way for verified personhood beyond conventional identity systems.
 
 ## Features
 
@@ -17,18 +12,6 @@ This project provides a foundation for building web3 applications leveraging Sil
   * Retrieving user accounts.
 
 ## Getting Started
-
-First, clone the repository:
-
-```bash
-git clone https://github.com/nestorbonilla/silk-template
-```
-
-Then navigate to the project directory:
-
-```bash
-cd silk-template
-```
 
 Install dependencies:
 

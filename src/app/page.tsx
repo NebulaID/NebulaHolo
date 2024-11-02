@@ -23,7 +23,7 @@ export default function Home() {
           <PersonalSign />
           <SwitchChains />
         </>
-      ) : ("Not connected")}
+      ) : ("Please connect with your Silk Wallet")}
       </div>
     </main>
   );
