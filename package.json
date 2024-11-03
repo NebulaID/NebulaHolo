@@ -16,11 +16,9 @@
     "@rainbow-me/rainbowkit": "^2.2.0",
     "@silk-wallet/silk-wallet-sdk": "^0.0.26",
     "@tanstack/react-query": "^5.51.23",
-    "daisyui": "^4.12.14",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "tailwindcss-animate": "^1.0.7",
     "viem": "^2.19.4",
     "wagmi": "^2.12.5"
   },
