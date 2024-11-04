@@ -8,8 +8,8 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Silk Wallet Template",
-  description: "Starter template for Silk Wallet",
+  title: "NebulaHolo by NebulaID",
+  description: "Universal Personhood Issuer",
 };
 
 export default function RootLayout({
@@ -19,8 +19,8 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">      
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+    <html lang="en">
+      <body className={`${inter.className} flex flex-col min-h-screen bg-gradient-to-r from-[#9efff2] to-[#c1a8ff] bg-opacity-50  `}>
         <Providers>
           <Menu />
           {children}

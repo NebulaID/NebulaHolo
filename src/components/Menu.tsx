@@ -6,8 +6,8 @@ import Login from "@/components/Login";
 import Image from "next/image";
 
 const navigation = [
-  { name: 'User Onboarding', href: '/' }
-  // { name: 'Page 2', href: '/newpage' },
+  { name: 'User Onboarding', href: '/' },
+  { name: 'Identity', href: '/identity' },
 ];
 
 export default function Menu() {
@@ -15,7 +15,7 @@ export default function Menu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   return (
-    <header className="border-b">
+    <header className="border-b bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
