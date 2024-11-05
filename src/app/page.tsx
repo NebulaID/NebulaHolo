@@ -1,30 +1,83 @@
-'use client';
+"use client";
+import React from 'react';
+import { useWallet } from "@/components/WalletContext";
+import Link from 'next/link';
 import PersonalSign from "@/components/PersonalSign";
 import SwitchChains from "@/components/SwitchChains";
-import { useWallet } from "@/components/WalletContext";
+import HolonymCheck from '@/components/HolonymCheck';
 
 export default function Home() {
-  
   const {
     connected,
     walletClient,
     userAddress,
   } = useWallet();
-  
+
   return (
-    <main className="flex flex-grow flex-col items-center justify-between p-24">
-      <div className="w-full max-w-5xl flex flex-col items-center space-y-4 font-mono text-sm lg:flex">         
-      {connected && walletClient && userAddress ? (
-        <>
-          <div className="p-4 rounded-md border-black border bg-white w-1/2">
-            <h2 className="text-lg font-semibold mb-2">Address</h2>
-            <p className="mt-2 text-gray-600 break-all">{userAddress}</p> 
-          </div>        
-          <PersonalSign />
-          <SwitchChains />
-        </>
-      ) : ("Please connect with your Silk Wallet")}
+    <div className="flex flex-col justify-center align-middle items-center  p-[4rem] md:p-[8rem] lg:p-[10rem] w-screen ">
+      <div className=" text-black text-center">
+        <div className="flex flex-col ">
+          <div className="mb-5 text-5xl font-serif font-bold">  NebulaHolo Identity Check </div>
+          <div className="mb-5 text-xl">
+            Checking your identity using NebulaID & Holonym
+          </div>
+
+          <HolonymCheck />
+
+          {/* {connected && walletClient && userAddress ? (
+                        <div>
+
+                            <div className="flex flex-row pt-10 items-center justify-center">
+                                <span>User Sybil Resistance Check:</span>
+                                <div className="bg-gray-200 mx-2 px-4 py-2 rounded-xl font-semibold">
+                                    {isUnique ? 'unique' : 'not unique'}
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="flex flex-row pt-10 items-center justify-center">
+                            <span>User Sybil Resistance Check:</span>
+                            <div className="bg-gray-200 mx-2 px-4 py-2 rounded-xl font-semibold">
+                                Please connect with your Silk Wallet
+                            </div>
+                        </div>
+                    )} */}
+
+          <div className="pt-10 font-mono">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-xl ">
+                <Link href="/">
+                  <div className="bg-white p-6 rounded-xl ">
+                    <h2 className="text-2xl font-semibold mb-4">Connect Your Onchain Wallet</h2>
+                    <div className='py-2'>
+                      User can connect their onchain wallet or NebulaID wallet to Silk Wallet for better sybil resistance check and onchain score.
+                    </div>
+                    <button
+                      className="button-link bg-black m-2 px-4 py-2 text-white rounded"
+                    >
+                      Verify with Silk Wallet
+                    </button>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-xl ">
+                {connected && walletClient && userAddress ? (
+                  <div className='flex flex-col items-center space-y-4 font-mono text-sm lg:flex w-full'>
+                    <div className="p-4 rounded-md border-black border bg-white w-1/2">
+                      <h2 className="text-lg font-semibold mb-2">Silk Address</h2>
+                      <p className="mt-2 text-gray-600 break-all">{userAddress}</p>
+                    </div>
+                    <PersonalSign />
+                    <SwitchChains />
+                  </div>
+                ) : ("Please connect with your Silk Wallet")}
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -18,12 +18,12 @@ export default function Verify() {
         <div className="flex flex-col justify-center align-middle items-center  p-[4rem] md:p-[8rem] lg:p-[10rem] w-screen ">
             <div className=" text-black text-center">
                 <div className="flex flex-col ">
-                    <div className="mb-5 text-5xl font-serif font-bold">  NebulaHolo Identity Verification </div>
+                    <div className="mb-5 text-5xl font-serif font-bold"> Identity Verification </div>
                     <div className="mb-5 text-xl">
-                        Verify your identity using NebulaID & Holonym
+                        Verify your identity using NebulaHolo
                     </div>
 
-                    <HolonymCheck />
+                    {/* <HolonymCheck /> */}
 
                     <div className="pt-10 font-mono">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
