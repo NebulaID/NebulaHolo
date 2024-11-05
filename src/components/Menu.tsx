@@ -4,25 +4,31 @@ import { Dialog, DialogPanel } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Login from "@/components/Login";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
-  { name: 'User Onboarding', href: '/' },
+  { name: 'Onboard', href: '/onboard' },
   { name: 'Identity', href: '/identity' },
+  { name: 'Verify', href: '/verify' },
 ];
 
 export default function Menu() {
-  
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
+
   return (
     <header className="border-b bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">NebulaHolo</span>
-            <Image className="h-8 w-auto" src="/nebula.png" width="24" height="24" alt="Silk Logo" />
-          </a>
-          <div className=" justify-center items-center align-middle p-2 px-2 text-lg font-serif ">NebulaHolo</div>
+          <Link href="/">
+            <div className="flex lg:flex-1">
+              <a href="#" className="-m-1.5 p-1.5">
+                <span className="sr-only">NebulaHolo</span>
+                <Image className="h-8 w-auto" src="/nebula.png" width="24" height="24" alt="Silk Logo" />
+              </a>
+              <div className=" justify-center items-center align-middle p-2 px-2 text-lg font-serif ">NebulaHolo</div>
+            </div>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
