@@ -7,9 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
-  { name: 'Onboard', href: '/onboard' },
   { name: 'Identity', href: '/identity' },
   { name: 'Verify', href: '/verify' },
+  { name: 'Onboard', href: '/' },
 ];
 
 export default function Menu() {
