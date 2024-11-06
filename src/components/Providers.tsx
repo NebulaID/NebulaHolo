@@ -7,6 +7,16 @@ import { config } from "@/lib/config";
 import WalletContext from "./WalletContext";
 import { WalletClient, createWalletClient, custom } from "viem";
 import { mainnet, sepolia } from "viem/chains";
+import { AuthKitProvider } from '@farcaster/auth-kit';
+
+
+import {
+  getDefaultConfig,
+  RainbowKitProvider,
+  connectorsForWallets,
+  getDefaultWallets,
+  Chain
+} from "@rainbow-me/rainbowkit"
 
 const queryClient = new QueryClient();
 
@@ -29,6 +39,7 @@ export default function Providers({ children }: Props) {
       case "sepolia":
         network = sepolia;
         break;
+
       default:
         network = mainnet;
         break;
@@ -40,14 +51,14 @@ export default function Providers({ children }: Props) {
     });
     setWalletClient(newWalletClient);
   }, [currentNetwork]);
-  
+
   useEffect(() => {
     if (typeof window === "undefined") return;
-  
+
     const silk = initSilk();
     // @ts-ignore
     window.silk = silk;
-  
+
     const checkConnection = async () => {
       try {
         // @ts-ignore
@@ -66,12 +77,16 @@ export default function Providers({ children }: Props) {
     };
     checkConnection();
   }, [initializeWalletClient]);
-  
+
   return (
     <WalletContext.Provider value={{ connected, setConnected, walletClient, setWalletClient, userAddress, setUserAddress, currentNetwork, setCurrentNetwork, initializeWalletClient }}>
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
-          {children}
+          <AuthKitProvider config={configFarcaster}>
+            <RainbowKitProvider appInfo={demoAppInfo}>
+              {children}
+            </RainbowKitProvider>
+          </AuthKitProvider>
         </QueryClientProvider>
       </WagmiProvider>
     </WalletContext.Provider>

@@ -10,8 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@farcaster/auth-kit": "^0.6.0",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@rainbow-me/rainbowkit": "^2.2.0",
     "@silk-wallet/silk-wallet-sdk": "^0.0.26",
     "@tanstack/react-query": "^5.51.23",
     "daisyui": "^4.12.14",
