@@ -11,11 +11,7 @@ import { AuthKitProvider } from '@farcaster/auth-kit';
 
 
 import {
-  getDefaultConfig,
   RainbowKitProvider,
-  connectorsForWallets,
-  getDefaultWallets,
-  Chain
 } from "@rainbow-me/rainbowkit"
 
 const queryClient = new QueryClient();
