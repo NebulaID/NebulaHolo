@@ -6,8 +6,9 @@ import Login from "@/components/Login";
 import Image from "next/image";
 
 const navigation = [
-  { name: 'User Onboarding', href: '/' },
   { name: 'Identity', href: '/identity' },
+  { name: 'Verify', href: '/verify' },
+  { name: 'Onboard', href: '/' },
 ];
 
 export default function Menu() {
